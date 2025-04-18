@@ -74,6 +74,8 @@ html {
 
 section {
         padding: var(--section-padding) 0;
+        background-size: cover;
+        background-repeat: no-repeat;
 }
 
 .box-h2 {
@@ -755,8 +757,7 @@ text-align: right; */
 
 @media (max-width: 992px) {
         .left .img-cont {
-                background-image: linear-gradient(to bottom, #e9e9e9, #ffffff);
-                width: 370px;
+                background: linear-gradient(#dbe4f1 0%, #fff 100%) !important;
         }
 }
 
@@ -1206,6 +1207,7 @@ text-align: right; */
 
 .text-centrly {
         text-align: center;
+        padding: 0 15px;
 }
 
 @media (max-width: 902px) {
@@ -1219,7 +1221,31 @@ text-align: right; */
         }
 
         .easer-header > img{
-                width: 500px;
+                max-width: 450px;
         }
         
+}
+
+.easer-header{
+        position: relative;
+}
+
+.easer-header::before{
+        content: "";
+        background: url(rounded-layer.png);
+        background-position: center;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: -185px;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        background-size: cover;
+}
+
+.interface {
+        background-image: url(/pattern2.webp);
+        background-size: cover;
+        background-repeat: no-repeat;
 }
